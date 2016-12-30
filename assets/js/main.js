@@ -33,10 +33,18 @@
     )
   })
 
-
   $('#header').on('click', function (e) {
     e.preventDefault()
     $window.scrollTo('#main', 250)
+  })
+  $('#main header').click(function () {
+    $window.scrollTo('#price', 150)
+  })
+  $('#main footer').click(function () {
+    $window.scrollTo('#footer header', 150)
+  })
+  $('#footer').click(function () {
+    $window.scrollTo('#header', 150)
   })
   /*
   Directive by HTML5 UP
