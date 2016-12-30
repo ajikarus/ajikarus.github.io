@@ -33,8 +33,7 @@
     )
   })
 
-  $('#header').on('click', function (e) {
-    e.preventDefault()
+  $('#header').click(function () {
     $window.scrollTo('#main', 250)
   })
   $('#main header').click(function () {
