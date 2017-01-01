@@ -1,7 +1,8 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import "libs/skel";
+@import 'libs/skel';
+@import 'libs/basictable';
 
 @include skel-breakpoints((
   wide: '(max-width: 1680px)',
@@ -1380,6 +1381,16 @@ input[type="button"],
 
 }
 
+
+#main #promo {
+  width: 200px;
+  margin: {
+    top: 4em;
+    bottom: 0;
+    left: auto;
+    right: auto;
+  }
+}
 
 /*
 Directive by HTML5 UP

@@ -33,21 +33,41 @@
     )
   })
 
-  $('#header').click(function () {
+  // ScrollTo points
+  $('#header').click(function (e) {
+    if (e.target.nodeName === 'A') return
     $window.scrollTo('#main', 250)
   })
-  $('#main header').click(function () {
+
+  $('#main header').click(function (e) {
+    if (e.target.nodeName === 'A' || e.target.nodeName === 'IMG') return
     $window.scrollTo('#price', 150)
   })
-  $('#main footer').click(function () {
+
+  $('#price').click(function (e) {
+    if (e.target.nodeName === 'A' || e.target.nodeName === 'TH') return
+    $window.scrollTo('#main footer', 150)
+  })
+
+  $('#main footer').click(function (e) {
+    if (e.target.nodeName === 'A') return
     $window.scrollTo('#footer header', 150)
   })
-  $('#footer').click(function () {
+
+  $('#footer').click(function (e) {
+    if (e.target.nodeName === 'A') return
     $window.scrollTo('#header', 150)
   })
+
+  $('#prices').basictable()
+
+  $('#promo').click(function (e) {
+    window.location.href = $(this).find('img').attr('src')
+  })
+
   /*
-  Directive by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-  */
+   * Directive by HTML5 UP
+   * html5up.net | @ajlkn
+   * Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   */
 })(window.jQuery)
